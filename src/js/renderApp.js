@@ -30,3 +30,9 @@ export function createEl(data) {
 function renderBig(obj) {
   var lightbox = new SimpleLightbox('.gallery__item a').refresh();
 }
+
+export function clearHtml() {
+    const gallery = document.getElementById('galary');
+    gallery.innerHTML = '';
+  
+}

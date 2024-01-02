@@ -1,4 +1,4 @@
-import { createEl } from './renderApp';
+import { createEl, clearHtml } from './renderApp';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
@@ -38,6 +38,7 @@ async function fetchDataWithLoader(value) {
 form.addEventListener('submit', async event => {
   event.preventDefault();
   const value = inputValue.value;
+  clearHtml();
   await fetchDataWithLoader(value); 
 });
 
