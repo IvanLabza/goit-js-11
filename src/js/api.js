@@ -10,7 +10,7 @@ const url = `https://pixabay.com/api/?key=${key}`;
 async function fetchDataWithLoader(value) {
   const loader = document.createElement('span');
   loader.classList.add('loader');
-
+  
   try {
     form.appendChild(loader);
 
