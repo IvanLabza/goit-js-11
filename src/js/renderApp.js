@@ -1,7 +1,6 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
-
 function render(data, index) {
   return `
     <li class="gallery__item">
@@ -24,14 +23,8 @@ export function createEl(data) {
   for (let index = 0; index < data.length; index++) {
     gallery.insertAdjacentHTML('beforeend', render(data[index], index));
   }
-  const imgItems = document.querySelectorAll('.gallery__image');
 
-  imgItems.forEach(item => {
-    item.addEventListener('click', event => {
-      const index = event.target.dataset.index;
-      renderBig(data[index]);
-    });
-  });
+  renderBig(data);
 }
 
 function renderBig(obj) {
